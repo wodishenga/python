@@ -14,7 +14,7 @@ def filesCopy(name, oldFolderName, newFolderName, queue):
   			fwrite.write(content)
 
 		fread.close()
-        fwrite.close()
+        	fwrite.close()
 
         queue.put(name)
     else:

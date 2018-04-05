@@ -6,7 +6,7 @@ udpSocket.bind(("", 7788))
 
 sendData = "你好啊"
 #python3以gb2312格式对发送数据进行编码
-udpSocket.sendto(sendData.encode("gb2312"),("192.168.1.101", 8080))
+udpSocket.sendto(sendData.encode("gb2312"),("192.168.0.103", 8080))
 
 receData = udpSocket.recvfrom(1024)
 

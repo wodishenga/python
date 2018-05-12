@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css 选择器</title>
+	<style type="text/css">
+		div{
+			color: red;
+		}
+		/*id选择器:box只作用于id是box的标签*/
+		#box{ 
+			color:green;
+		}
+		/*类选择器*/
+		.red{
+			color: red;
+		}
+		.bold{
+			font-weight: bold;
+		}
+		.yahei{
+			font-family: "微软雅黑"
+		}
+		/*层级选择器：只会影响duanluo下面的em标签*/
+		.duanluo em{
+			text-indent: 40px;
+			font-size: 15px;
+		}
+/*		.list {
+			color:green;
+		}*/
+		.list a{
+			text-decoration:none;
+			color:red;
+		}
+		/*组选择器*/
+		.box1,.box2,.box3{
+			font-size: 15px;
+			text-decoration: none;
+		}
+		.box1{
+			color:red;
+		}
+		.box2{
+			color:blue;
+		}
+		.box3{
+			color:green;
+		}
+		/*伪选择器*/
+		.list p：hover{
+			text-decoration:none;
+			color:red;
+		}
+	</style>
+</head>
+<body>
+	<div>这是第一个div</div>
+	<div id="box">这是第二个div</div>
+	<div id="box1">第三个div</div>
+	<!--类选择器-->
+	<div class="red">第四个div</div>
+	<div class="red bold yahei">第五个div</div>
+
+	<p class="duanluo yahei">
+	HTML是 <em>HyperText Mark-up Language 的首字母简写</em>HyperText Mark-up Language 的首字母简写，意思是超文本标记语言，超
+    文本指的是超链接，标记指的是标签，是一种用来制作网页的语言，这种语言由一个个的
+    标签组成，用这种语言制作的文件保存的是一个文本文件，文件的扩展名为html或者htm。
+    <ui class="list">
+    	<a href="">哈哈哈</a>
+    	<li><a href="">哈哈哈</a></li>
+    	<li><a href="">哈哈哈</a></li>
+    	<li><a href="">哈哈哈</a></li>
+    </ui>
+	</p>
+
+</body>
+</html>

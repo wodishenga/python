@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>清除浮动</title>
+	<style type="text/css">
+	    .con, .con2{
+	    	width: 	400px;
+	    	border:1px solid #333;
+	    	margin:100px auto 0;
+	    	font-size: 0;
+			
+	    }
+	    .con a{
+	    	width: 	50px;
+	    	height:50px;
+	        display: inline-block;
+	    	background-color:gold; 
+	    	font-size:16px;
+	    	margin:20px;
+	    	text-align: center;
+	    	line-height: 50px;
+	    	text-decoration: none;
+	    }
+	    .con2{
+	    	/*第一种清除浮动的方法*/
+	    	/*overflow: hidden;*/
+	    }
+	    .con2 a{
+	    	width: 	50px;
+	    	height:50px;
+	        display: inline-block;
+	    	background-color:gold; 
+	    	font-size:16px;
+	    	margin:20px;
+	    	text-align: center;
+	    	line-height: 50px;
+	    	text-decoration: none;
+	    	float: left;
+	    }
+	    .con span{
+	    	font-size: 16px;
+	    	display: inline-block;
+	    	background-color: gold;
+	    }
+	    .con3{
+	    	width: 	300px;
+	    	border:1px solid #333;
+	    	margin:100px auto 0;
+	    	
+
+	    }
+	    .con3 span{
+	    	background-color: gold;
+	    	float: left;
+	    }
+	    /*清除塌陷*/
+	/*    .clearfix:before{
+	    	content:"";
+	    	display:table;
+	    }
+	    第二种成熟的清除浮动的方法
+	    .clearfix:after{
+	    	content:"";
+	    	display: table;
+	    	clear:both;
+	    }*/
+        /*清除浮动和清除margin 塌陷*/
+	    .clearfix:before,.clearfix:after{
+	    	content:"";
+	    	display: table;
+	    }
+	    .clearfix:after{
+	    	clear: both;
+	    }
+	    .clearfix {
+	    	zoom:1;
+	    }
+	</style>
+</head>
+<body>
+	<div class="con2 clearfix" >
+		<a href="">1</a>
+		<a href="">2</a>
+		<a href="">3</a>
+		<a href="">4</a>
+		<a href="">5</a>
+		<a href="">6</a>
+		<a href="">7</a>
+		<a href="">8</a>
+		<a href="">5</a>
+		<a href="">6</a>
+		<a href="">7</a>
+		<a href="">8</a>
+	</div>
+
+	<div class="con3 clearfix">
+		<span>span元素</span>
+		<span>span元素</span>
+		<span>span元素</span>
+		<span>span元素</span>
+		<span>span元素</span>
+	</div>
+	
+</body>
+</html>

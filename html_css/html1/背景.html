@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景</title>
+	<style type="text/css">
+		.box{
+			width:320px;
+			height:160px;
+			border:5px solid #000;
+			background-color: gold;
+			margin-bottom: 50px;
+			background-image: url(images/bg.jpg);
+			font-size:40px;	
+			color:gold;
+		}
+		.box2{
+			width:320px;
+			height:160px;
+			border:5px solid #000;
+			background-color: gold;
+			margin-bottom: 50px;
+			font-size:40px;	
+			color:gold;
+		}
+		.box3{
+			width:320px;
+			height:160px;
+			border:5px solid #000;
+			background-color: gold;
+			margin-bottom: 50px;
+			background-image: url(images/bg.jpg);
+			/*
+			repeat:重复平铺;
+			repeat-x:横向平铺;
+			repeat-y:纵向平铺;
+			no-repeat:不重复;			*/
+			/*background-repeat: no-repeat;
+			background-position: left bottom;
+
+			background-position:-20px -20px;*/
+			background:url(images/bg.jpg) -20px -20px gold no-repeat;
+		}
+
+		.box4{
+			width:100px;
+			height: 100px;
+			border:5px solid #000;
+			/*background-image:url(./images/location_bg.jpg);
+			background-repeat: no-repeat;
+			background-position:-110px 	-150px;*/
+			background:url(./images/location_bg.jpg) -110px -150px no-repeat ;
+		}
+	</style>
+</head>
+<body>
+	<!-- 图片作为背景 -->
+	<div class="box">背景图片</div>
+	<!-- 图片作为内容 -->
+	<div class="box2"><img src="images/bg.jpg" alt="">背景图片</div>
+	<div class="box3"></div>
+	<div class="box4"></div>
+</body>
+</html>

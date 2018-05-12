@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css 盒子模型</title>
+	<style type="text/css">
+		.box{
+			width: 400px;
+			height: 200px;
+			background-color: blue;
+
+			/*border-top-width: 10px;
+			border-top-color: #000;
+			实线：solid  虚线：dashed 点线：dotted
+			border-top-style: solid;*/
+			/*border-top:10px solid #000;
+			border-left: 10px dashed #000;
+			border-right:10px dotted #000;
+			border-bottom:10px solid #000;*/
+			border:10px solid #000;
+
+		/*	padding-top:20px;
+			padding-left:40px;
+			padding-right:200px;
+			padding-bottom: 40px;*/
+			/*上 右 下 左
+			padding:20px 50px 20px 50px;*/
+			/*上 左右 下*/		
+			/*padding:20px 100px 50px;*/
+			/*上下 左右*/
+			/*padding:20px 100px;*/
+			/*上下左右*/
+			padding:20px;
+			/*auto 居中*/
+			margin: 50px auto;
+		}
+	</style>
+</head>
+<body>
+	<!-- 	盒子的真实尺寸计算：
+	盒子的宽度：width+左右的padding值+左右的border的值
+	盒子的高度：height+上下的padding值+上下的border值 -->
+	<div class="box">
+		HTML是 HyperText Mark-up Language 的首字母简写，意思是超文本标记语言，超
+    文本指的是超链接，标记指的是标签，是一种用来制作网页的语言，这种语言由一个个的
+	</div>
+</body>
+</html>

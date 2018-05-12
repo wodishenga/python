@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单</title>
+</head>
+<body>
+	<!--
+		get方式提交数据 不保密
+		post方式提交 method="post"
+	    ?
+		username=zhushengjie
+		&pwd=haha
+		&gender=0
+		&favorite=game
+		&favorite=shopping
+		&info=hello
+		&site=0
+	-->
+	<h3>用户注册</h3>
+	<!-- action定义表单数据最终提交的地址-->
+	<form action="http://baidu.com" method="post">
+		<div>
+			<label for="username">用户名：</label>
+			<input type="text" name="username" id="username" >
+		</div>
+		<br>
+		<br>
+		<div>
+			<label for="pwd">密码：</label>
+			<input type="password" name="pwd" id="pwd">
+		</div>
+		<br>
+		<br>
+		<div>
+			<label >性别:</label>
+			<input type="radio" name="gender" id="male" value="0"> <label for="male">男</label>   <!--radio单选框 名字相同-->
+			<input type="radio" name="gender" id="female" value="1"> <label for="female">女</label>
+		</div>
+		<br>
+		<br>
+		<div>
+			<label>性别:</label>
+			<input type="checkbox" name="favorite" value="game"> 游戏   <!--checkbox多选框-->
+			<input type="checkbox" name="favorite" value="shopping"> 逛街
+			<input type="checkbox" name="favorite" value="sleeping"> 睡觉
+		</div>
+		<br>
+		<br>
+		<div>
+			<label>照片：</label>
+			<input type="file" name="" >
+		</div>
+		<br>
+		<div>
+			<label>个人描述:</label>
+			<textarea name="info"></textarea>
+		</div>
+
+		<br>
+		<div>
+			<label>籍贯:</label>
+			<select name="site">
+				<option value="0">北京</option>
+				<option value="1">上海</option>
+				<option value="2">广州</option>
+				<option value="3">深圳</option>
+			</select>
+		</div>
+		<br>
+		<input type="submit" name="" value="提交">
+		<input type="reset" name="" value="重置">
+		<input type="button" name="" value="按键">
+		<!-- hidden不会在页面显示，可用来存值提交-->
+		<input type="hidden" name="hid" value="1000">
+		<input type="image" name="picture" src="images/bg.jpg">
+	</form>
+</body>
+</html>

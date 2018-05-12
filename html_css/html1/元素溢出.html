@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>元素溢出</title>
+	<style type="text/css">
+		.con{
+			width:300px;
+			height: 200px;
+			background-color:#333;
+			margin:50px auto 0;
+			/*第一种解决塌陷的方法*/	
+			/*border: 1px solid 	gold; */
+			/*1.隐藏溢出*/
+			/*overflow: hidden;*/
+			/*2.不管是否溢出都设置滚动条*/
+			/*overflow: scroll;*/
+			/*3.自动设置滚动条*/
+			overflow: auto;
+
+		}
+		.box{
+			width: 200px;
+			height: 500px;
+			background-color:green;
+			
+		}
+	</style>
+</head>
+<body>
+	 	<div class="con">
+		<div class="box">
+			
+		</div>
+	</div>
+</body>
+</html>

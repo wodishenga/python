@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定位</title>
+	<style type="text/css">
+		.con{
+			width:400px;
+			height: 400px;
+			border:1px solid #000;
+			margin:50px auto 0;
+			position: relative;  /*把父级设置为相对，子级设置为绝对，那么子级可以根据父级进行定位*/
+
+		}
+		.con div{
+			width: 200px;
+			height: 100px;
+			margin: 20px;
+			background-color: gold;
+			text-align: center;
+			line-height: 100px;
+			font-size: 40px;
+
+		}
+		body .box1{
+			/*position: relative;相对定位*/
+			position: absolute;/*绝对定位*/
+			left:-60px;
+			top:-60px;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+	</div>
+</body>
+</html>

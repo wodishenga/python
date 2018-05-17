@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function father(name,age){
+
+			this.name = name;
+			this.age = age;
+
+		}
+		//在person这个原型的属性中增加一个属性
+		father.prototype.showname = function(){
+				alert(this.name);
+			}
+		father.prototype.showage = function(){
+				alert(this.age);
+			}
+		//调用父类的call方法，继承父类的属性
+		function son(name,age,job){
+			//改变this指针的指向，指向儿子
+			father.call(this, name, job);
+			this.job = job;
+		}
+		//继承父类方法
+		son.prototype = new father();
+		son.prototype.showjob = function(){
+			alert(this.job);
+		}
+		var tom = new son('xixi', 18, 'pythoner');
+
+		tom.showjob();
+		tom.showage();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时器</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var pop = document.getElementById('pop');
+			var shut = document.getElementById('shutdown');
+			setTimeout(a, 3000);
+
+			function a(){
+				pop.style.display = 'block';
+			}
+
+			shut.onclick = function(){
+				pop.style.display = 'none';
+			}
+		}
+		//setTimeout(a,3000);
+	</script>
+	<style type="text/css">
+		.pop_con{
+			display: none;
+		}
+		.pop{
+			width:400px;
+			height:300px;
+			background-color: #fff;
+			border:1px solid #000;
+			position:fixed;
+			left:50%;
+			top:50%;
+			margin-left:-200px;
+			margin-top:-150px;
+			z-index: 9999;  //盖住遮罩mask 进行操作
+		}
+
+		.mask{
+			position: fixed;
+			width: 100%;
+			height:100%;
+			background-color: #000;
+			left:0;
+			top:0;
+			opacity:0.3;  //透明度
+			filter:alpha(opacity=30);
+			z-index:9990;   //盖住下面的所有样式
+		}
+	</style>
+</head>
+<body>
+	<h1>首页标题</h1>
+	<p>页面内容</p>
+	<div class='pop_con' id='pop'>
+		<div class='pop'>
+			<h3>提示信息</h1>
+			<a href="#" id='shutdown'>关闭</a>
+		</div>
+		<div class='mask'></div>
+	</div>
+</body>
+</html>

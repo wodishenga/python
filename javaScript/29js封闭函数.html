@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// function a(){
+		// 	var str = '欢迎';
+		// 	alert(str);
+		// }
+		// a();
+		//封闭函数里面的变量不会影响到全局，不会影响到其他程序
+		//封闭函数标准写法
+	 /*	(function(){
+			var str = '欢迎';
+			alert(str);
+		})();*/
+		//另一种写法
+		/*~function(){
+			var str = '欢迎';
+			alert(str);
+		}();*/
+
+		var a = function(){
+			alert('test1');
+		};   //注意这里要加分号
+
+		;(function(){       //写封闭函数可以在前面加个分号
+			var a = function(){
+				alert('test2');
+			}
+
+			a();
+		})();
+
+		a();
+	</script>
+</head>
+<body>
+</body>
+</html>

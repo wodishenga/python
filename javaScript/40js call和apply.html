@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function fun(a,b){
+			alert('this is'+this+'a is' +a+',b is'+b); //this = object window 
+		}
+		fun(2,3);  
+
+		fun.call('abc',2,3);  //改变this指针的指向  this is abc, a is 2,b is 3 
+		fun.apply('cdf',[3,4]); 
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

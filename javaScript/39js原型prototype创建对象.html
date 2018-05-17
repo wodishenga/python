@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function Person(name,age,job){
+
+			this.name = name;
+			this.age = age;
+			this.job = job;
+
+			
+
+		}
+		//在person这个原型的属性中增加一个属性
+		Person.prototype.showname = function(){
+				alert(this.name);
+			}
+		Person.prototype.showage = function(){
+				alert(this.age);
+			}
+
+		Person.prototype.showjob = function(){
+				alert(this.job);
+			}
+		var tom = new Person('xixi', 18, 'pythoner');
+		var jack = new Person('hah', 16,'hh');
+		tom.showjob();
+		tom.showname();
+		jack.showage(); //16
+		alert(tom.showage==jack.showage); //true
+
+		jack.showage = function(){
+			alert("我的年纪是18");
+		}
+		jack.showage(); //我的年纪是18  对象本身的属性呢会覆盖掉类原型属性中的同名属性
+		alert(tom.showage==jack.showage); //false
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

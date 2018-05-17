@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js 基本语法</title>
+	<script type="text/javascript">
+		//整个页面加载完成后，会执行这个函数
+		window.onload = function(){
+			document.getElementById("div1").title = '哈哈哈哈';
+			// document.getElementById("link1").href = 'http://www.baidu.com';
+			// document.getElementById("link1").title = '跳到百度';
+
+			var oA = document.getElementById("link1");
+			oA.href = 'http://www.baidu.com';
+			oA.title = '跳到百度';
+
+			alert(oA.id);
+		}
+	</script>
+</head>
+<body>
+	<div id="div1" class="div1" style="color:red" title="这是div元素，are you ok?">这是div元素</div>
+	<a href="#" id="link1">百度一下</a>
+</body>
+</html>

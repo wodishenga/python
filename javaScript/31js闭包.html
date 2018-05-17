@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		//闭包就是函数嵌套，内部函数可以引用外部函数的变量
+		/*function a(b){
+			var c = 10;
+			function d(){
+
+				alert(c);
+				alert(b);
+			}
+			return d;
+		};
+
+		var f = a(24);
+
+		f();*/
+
+
+		var x = (function a(b){
+			var c = 10;
+			function d(){
+
+				alert(c);
+				alert(b);
+			}
+			return d;
+		})(24);
+
+		x();
+	</script>
+</head>
+<body>
+</body>
+</html>

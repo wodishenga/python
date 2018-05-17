@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oInput1 = document.getElementById("input1");
+			var oInput2 = document.getElementById("input2");
+			var oBtn = document.getElementById("btn");
+
+			oBtn.onclick = function(){
+				var i = oInput1.value;
+				var j = oInput2.value;
+				var result = add(i,j);
+				alert(result);
+
+			}
+
+			function add(i,j){
+				var result = parseInt(i) + parseInt(j);  //转化为数字
+				return result;
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" name="" id="input1">
+	<input type="text" name="" id="input2">
+	<input type="button" name="" value="add" id="btn">
+</body>
+</html>

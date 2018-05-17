@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function Person(name,age,job){
+			var o = new Object(); //var 0 = {}; 空对象
+
+			o.name = name;
+			o.age = age;
+			o.job = job;
+
+			o.showname = function(){
+				alert(this.name);
+			}
+			o.showage = function(){
+				alert(this.age);
+			}
+
+			o.showjob = function(){
+				alert(this.job);
+			}
+			return o;
+
+		}
+
+		var tom = Person('tom', 18, 'pythoner');
+		tom.showjob();
+		tom.showage();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

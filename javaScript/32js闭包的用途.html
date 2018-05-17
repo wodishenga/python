@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		//用途一：可以保存循环的索引值
+		window.onload -= function(){
+			var ali = document.getElementsByTagName('li');
+
+			for(var i=0; i<ali.length; i++){
+				/*for循环每一次都执行一个 IIEF （自执行函数），每一次变量 i 被当做参数传到IIEF中去 ， 那么这个自执行函数中创建了一个变量，参数 i 然后元素节点 ali 绑定一个onclick事件，执行函数里面需要用到这个参数 i ，但是你又没点 ， 那么这个遍历 i 就没有被清理 ， 就一直在参数里面被保存着 ， 每一个IIEF都做一样的事情 ， 所以这个时候就产生了闭包 ， 变量 i 并没有被回收，依然在等待你使用。*/
+				//闭包可以理解为一个没有释放资源的栈区，可以保存i的值，如果没有闭包那么这里i的值为8.
+				(function(i){
+					ali[i].onclick = function(){
+						alert(i);
+					}
+				})(i);
+			}
+		}
+	</script>
+	<style type="text/css">
+		li{
+			height:30px;
+			background-color: gold;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<ul id='list'>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+	</ul>
+</body>
+</html>

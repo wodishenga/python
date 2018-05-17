@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>换肤</title>
+	<link rel="stylesheet" type="text/css" href="1.css" id="link1">
+	<script type="text/javascript">
+		window.onload = function(){
+			var oBtn1 = document.getElementById("btn1");
+			var oBtn2 = document.getElementById("btn2");
+
+			oBtn1.onclick = skin1;
+			oBtn2.onclick = skin2;
+		}
+		 function skin1(){
+			var oLink = document.getElementById("link1");
+			oLink.href = "1.css";
+		}
+		function skin2(){
+			var oLink = document.getElementById("link1");
+			oLink.href = "2.css";
+		}
+	</script>
+</head>
+<body>
+	<!-- 行间调用函数
+	<input type="button" name="" value="皮肤1" onclick="skin1()">
+	<input type="button" name="" value="皮肤2" onclick="skin2()"> -->
+	<input type="button" name="" value="皮肤1"  id="btn1">
+	<input type="button" name="" value="皮肤2"  id="btn2">
+	<div class="box1"></div>
+	<div class="box2"></div>
+	
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var a = [2,2,3,4,3,4,5,2,6,6];
+		var b = [];
+
+		for (var i = 0; i<a.length; i++){
+			//如果不是第一次出现，则不push
+			if(a.indexOf(a[i])==i) {
+				b.push(a[i]);
+			}
+		}
+		alert(b);
+	</script>
+</head>
+<body>
+</body>
+</html>

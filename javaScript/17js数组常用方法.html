@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var aList = [1,2,3,4];
+
+		var Str = aList.join("-");
+		var str2 = aList.join("");
+
+		// alert(Str);
+		// alert(str2);
+
+		aList.push("abc");
+		// alert(aList);
+
+		aList.pop();
+		// alert(aList);
+
+		aList.unshift(0) //0,1,2,3,4
+		// alert(aList);
+
+		aList.shift() //1,2,3,4
+		// alert(aList);
+
+		aList.reverse();
+		// alert(aList);
+
+		var aList2 = ['a','b','c','d','a','b'];
+
+		var num = aList2.indexOf('a');
+		// alert(num);
+
+		// aList2.splice(2,2); //删除 c,d 从第三个起删除两个
+
+		// alert(aList2)
+
+		aList2.splice(2,2,'e');
+
+		alert(aList2); //弹出a,b,e,a,b 删除后在第二个元素后加元素
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

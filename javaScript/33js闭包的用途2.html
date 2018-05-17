@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>私有变量计数器</title>
+	<script type="text/javascript">
+		var count = (function(){
+			var a = 0;
+			function b(){
+				a++;
+				return a;
+			}
+			return b;
+		})();
+		alert(count());
+		alert(count());
+		alert(count());
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

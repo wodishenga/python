@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript">
+		var a = '123abc';
+
+		var b = '5.3add';
+		var c = 'abc123';
+		var d = 'add5.3';
+
+		var e = parseInt(a);
+		var f = parseFloat(b);
+		var g = parseInt('c');
+		var h = parseFloat('d');
+
+		//alert(e);//123
+		//alert(f);//5.3
+		//alert(g); //NaN  not a number  不是一个数字
+		//alert(h); //NaN 
+
+		//parseInt和parseFloat在判断NaN的时候有问题
+		//alert(h); //NaN 
+		//alert(h==NaN); //false
+		//alert(NaN==NaN);//false
+
+		//alert(isNaN(a));  //true a 不是一个数字
+
+		var j = 12;
+		var x = '12';
+		alert(isNaN(j)); //false
+		alert(isNaN(x)); //false
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

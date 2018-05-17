@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var name = "zhushengjie";
+		var age = 18;
+
+		//alert('my name is ' + name + ',i am ' + age + 'years old');
+
+		a = 12;b = 13;
+		//alert(a+b); //25
+		c = '13';
+		//alert(a+c); //1213
+		//parseInt 把字符串或者小数转化为整数 ,
+		//alert(a+parseInt(c)); //25
+
+		d = 5.6;
+		//alert(parseInt(d));
+
+		e = '1ab23';
+		//alert(parseInt(e)); // 1 
+
+		f = 4.3;
+		//alert(d+f); //9.899999999999
+
+		//alert(parseFloat(d)+parseFloat(f));//9.89999999999
+
+		//相加等于9.89999999999的解决方法如下
+		//alert((parseFloat(d)*100+parseFloat(f)*100)/100);
+
+
+		var str = '2018-3-12';
+		var array = str.split("-");
+		var array2 = str.split("");
+
+		console.log(array); //数组，console.log可以在chrome上的console上看到调试信息
+		console.log(array2);
+
+
+		document.title = array2; //直接在标签上打出来
+
+		var str2 = '#div';
+		//charAt 获取字符串中的一个字符
+		if(str2.charAt(0) == '#'){
+			alert("哈哈");
+		}
+
+		var str3 = "microsoft yahei";
+
+		var num = str3.indexOf('yahei'); //找到子字符串，则返回子字符串在源字符串中的索引
+		//alert(num); //10
+
+		var num1 = str3.indexOf('haha');//没有找到返回-1
+		//alert(num1); //-1
+
+		var str4 = str3.substring(10,13);//10~12
+		var str5 = str3.substring(10); //10~末尾
+
+		var str6 = str5.toUpperCase(str5);
+		alert(str6);
+
+		//反转字符串
+		var str7 = str3.split('').reverse().join('');
+		alert(str7);
+	</script>
+</head>
+<body>
+</body>
+</html>

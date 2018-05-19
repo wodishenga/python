@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			alert($('.box').html());
+
+			$('.box').html('<a href="http://www.baidu.com">百度网</a>');
+
+			//prop方法读写checkbox属性
+			alert($('#check').prop('checked'));
+
+			$('#check').prop({checked:true});
+
+			alert($('.box2').text());  //只获取文本文档  div审判
+			alert($('.box2').html());  // <span>div审判</span>  包括标签
+		});
+	</script> 
+</head>
+<body>
+	<div class='box'>这是一个div元素</div>
+	<input type="checkbox" name="" id='check' checked>嘻嘻
+	<div class='box2'><span>div审判</span></div>
+</body>
+</html>

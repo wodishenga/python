@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		//定义一个正则的规则
+		//第一种定义方法
+		var re = new RegExp('a', 'ig');  // 匹配a， i不分大小写，g是全局匹配
+		//第二种定义方法
+		var re2 = /a/ig;
+
+		var str = 'abc';
+
+		alert(re2.test(str));\
+
+		var re3 = /\d/;
+		var str2 = '123abc';
+
+		alert(re3.test(str2));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

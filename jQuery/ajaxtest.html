@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		//通过发送http请求 来获取数据
+		$.ajax({
+			url: './test.json',  //获取资源的路径
+			type: 'get',       //请求方式
+			dataType: 'json'   //数据格式
+			//data:{param1:'value1'},  //发给服务器的数据
+		})
+		//成功
+		.done(function() {
+			alert(data);
+		})
+		//失败
+		.fail(function() {
+			console.log("error");
+		});
+		//总是
+		// .always(function() {
+		// 	console.log("complete");
+		// });
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

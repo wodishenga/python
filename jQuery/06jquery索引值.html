@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			$('.list li').click(function(){
+				//alert(this.innerHTML);  8 8 8 8 
+
+				alert($(this).index()); //0 1 2  3 ..
+			});
+
+			
+		});
+	</script>
+	<style type="text/css">
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: gold;
+			
+		}
+		.sty{
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<ul class='list'>
+		<li>8</li>
+		<li>8</li>
+		<li>8</li>
+		<li>8</li>
+		<li>6</li>
+		<li>8</li>
+		<li>8</li>
+		<li>8</li>
+	</ul>
+	
+</body>
+</html>

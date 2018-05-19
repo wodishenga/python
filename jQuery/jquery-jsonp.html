@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		$.ajax({
+			url: 'data.js',
+			type: 'get',
+			dataType: 'jsonp',  
+			jsonpCallback:'a'   //a是data.js的数据接口
+			
+		})
+		.done(function(data) {
+			alert(data.name);
+		})
+		.fail(function() {
+			console.log("error");
+		});
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

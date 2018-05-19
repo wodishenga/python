@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			$('#div1').css({color:'green'});//改变颜色
+
+			$('.box').css({fontSize:'30px'});
+
+			$('.list li').css({background:'gold',color:'red',fontSize:'30px'});
+		});
+	</script>
+	<style type="text/css">
+		#div1{
+			color:blue;
+		}
+		.box{
+			color:gold;
+		}
+		.list li{
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id='div1'>哈哈哈哈</div>
+	<div class='box'>嘻嘻</div>
+	<ul class='list'>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul>
+</body>
+</html>

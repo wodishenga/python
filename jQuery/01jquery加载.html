@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		//等全部页面渲染完，再执行onload
+		window.onload = function(){
+			var d = document.getElementById('div');
+			alert(d.innerHTML);
+		}
+		//在渲染之前就加载
+		/*$(document).ready(function(){
+			var $div = $('#div');
+			alert($div.html()+'jquery');
+		})*/
+		//简写  $(匿名函数)
+		$(function(){
+			var $div = $('#div');
+			alert($div.html()+'jquery');
+		});
+	</script>
+</head>
+<body>
+	<div id='div'>这是一个div元素</div>
+</body>
+</html>

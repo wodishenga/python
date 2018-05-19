@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			$('#text01').keyup(function(event) {
+				/* Act on the event */
+				var val = $(this).val()
+
+				$.ajax({
+					url: 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?',  //百度搜索的公用接口 
+					type: 'get',
+					dataType: 'jsonp',  
+					data:{word: val}   //向这个接口发送键盘输入的值 
+					
+				})
+				.done(function(data) {  //返回的数据存到了data，然后就可以把data里面的数据像是在页面上
+					
+					$('.list').empty();
+
+					for(var i=0;i<data.s.length; i++){
+						var $li = $('<li>'+data.s[j] +'</li>');
+
+						$li.prependTo('.list')  //把联想到的数据写到页面标签中
+					}
+				})
+				.fail(function() {
+					console.log("error");
+				});
+			});
+
+		})
+
+
+		
+		
+	</script>
+</head>
+<body>
+	<input type="text" name="" id="text01">
+	<ul class="list">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			alert($('.div1').css('fontSize'));//读取样式
+
+			//设置样式
+			$('.div1').css({background:'gold'});
+			
+			$('.div1').addClass('big');
+
+			$('.div1').removeClass('div1');
+		});
+	</script>
+	<style type="text/css">
+		.big{
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div class='div1'>哈哈哈哈</div>
+</body>
+</html>
